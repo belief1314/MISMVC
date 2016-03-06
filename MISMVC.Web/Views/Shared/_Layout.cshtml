@@ -1,0 +1,79 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>@ViewBag.Title - MIS</title>
+    @Styles.Render( "~/Content/css" )
+    @Scripts.Render( "~/bundles/modernizr" )
+	@Scripts.Render( "~/bundles/jquery" )
+	@Scripts.Render( "~/bundles/bootstrap" )
+	@RenderSection( "scripts" , required: false )
+</head>
+<body>
+	<div id="wrapper">
+		<!-- Navigation bar begin -->
+		<nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				@Html.ActionLink( "MIS" , "Index" , "Home" , new { area = "" } , new { @class = "navbar-brand" } )
+			</div>
+			<!-- /.navbar-header -->
+			<ul class="nav navbar-top-links navbar-right">
+				<li class="dropdown">
+					<a class="dropdown-toggle" data-toggle="dropdown" href="#">
+						<i class="fa fa-user fa-fw"></i>  <i class="fa fa-caret-down"></i>
+					</a>
+					<ul class="dropdown-menu dropdown-messages">
+						<li>
+							<a href="#"><i class="fa fa-user fa-fw"></i> User Profile</a>
+						</li>
+						<li>
+							<a href="/Account/Login"><i class="fa fa-sign-in fa-fw"></i> Login</a>
+						</li>
+						<li class="divider"></li>
+						<li>
+							<a href="/Account/Logoff"><i class="fa fa-sign-out fa-fw"></i> Logoff</a>
+						</li>
+					</ul>
+					<!-- /.dropdown-user -->
+				</li>
+				<!-- /.dropdown -->
+			</ul>
+			<!-- /.navbar-top-links -->
+			
+			@{ Html.RenderAction( "Menu" , "Account" ); }
+			<!-- /.navbar-static-side -->
+		</nav>
+
+		<!-- Navigation bar end -->
+
+		<div id="page-wrapper">
+			@*<div class="row">
+				<div class="col-lg-12">
+					<h1 class="page-header">Dashboard</h1>
+				</div>
+				 //.col-lg-12 
+			</div>
+			<div class="row">
+			</div>*@
+			@RenderBody( )
+
+		</div>
+		</div>
+	
+	<footer>			
+		@if( DateTime.Now.Year > 2016 ) {
+			<p>&copy; 2016 - @DateTime.Now.Year - Manage Information System</p>
+		} else {
+			<p>&copy; @DateTime.Now.Year - Manage Information System</p>
+		}
+	</footer>
+</body>
+</html>

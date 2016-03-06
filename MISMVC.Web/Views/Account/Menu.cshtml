@@ -1,0 +1,30 @@
+﻿@model MISMVC.Web.Models.UserInformation
+@{
+	ViewBag.Title = "Menu";
+	Layout = null;
+}
+
+<div class="navbar-default sidebar" role="navigation">
+	<div class="sidebar-nav navbar-collapse">
+		<ul class="nav" id="side-menu">
+			@if( Model != null ) {
+				foreach(var item in Model.MenuModules ) {
+				<li>
+					<a href="#"><i class="fa fa-dashboard fa-fw"></i>@item<span class="fa arrow"></span></a>
+					<ul class="nav nav-second-level">
+						@foreach( var item2 in Model.MenuItems ) {
+							if( item2.MenuItem.MenuModule.Name == item ) {
+							<li>
+								<a href="@item2.MenuItem.URL">@item2.MenuItem.Name</a>
+							</li>
+							}
+						}
+						</ul>
+				</li>
+			}
+			}
+		</ul>
+	</div>
+	<!-- /.sidebar-collapse -->
+</div>
+

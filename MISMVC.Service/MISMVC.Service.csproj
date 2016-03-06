@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0AF3D000-41D6-4980-B025-746F70A8308D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MISMVC.Service</RootNamespace>
+    <AssemblyName>MISMVC.Service</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="IService\IBaseService.cs" />
+    <Compile Include="IService\IEmployeeAssessmentService.cs" />
+    <Compile Include="IService\IEmployeeService.cs" />
+    <Compile Include="IService\IFormGroupService.cs" />
+    <Compile Include="IService\IFirewallService.cs" />
+    <Compile Include="IService\IILCService.cs" />
+    <Compile Include="IService\IInitiativeService.cs" />
+    <Compile Include="IService\IInterviewService.cs" />
+    <Compile Include="IService\ICRService.cs" />
+    <Compile Include="IService\ICertService.cs" />
+    <Compile Include="IService\IDocumentGroupService.cs" />
+    <Compile Include="IService\IDocumentService.cs" />
+    <Compile Include="IService\IMenuMenuItemService.cs" />
+    <Compile Include="IService\IMenuItemService.cs" />
+    <Compile Include="IService\IMenuModuleService.cs" />
+    <Compile Include="IService\IMenuService.cs" />
+    <Compile Include="IService\IMISModuleService.cs" />
+    <Compile Include="IService\IMISIDService.cs" />
+    <Compile Include="IService\IOrgnizationService.cs" />
+    <Compile Include="IService\IProjectService.cs" />
+    <Compile Include="IService\IRFSTimelineService.cs" />
+    <Compile Include="IService\IRFSService.cs" />
+    <Compile Include="IService\ISupportingContactService.cs" />
+    <Compile Include="IService\ISupportingSystemService.cs" />
+    <Compile Include="IService\ISysLogService.cs" />
+    <Compile Include="IService\ITicketService.cs" />
+    <Compile Include="IService\ITeamService.cs" />
+    <Compile Include="IService\IServerService.cs" />
+    <Compile Include="IService\ISoftwareGroupService.cs" />
+    <Compile Include="IService\IRoleService.cs" />
+    <Compile Include="IService\IUserService.cs" />
+    <Compile Include="IService\IVacationService.cs" />
+    <Compile Include="IService\IWeekService.cs" />
+    <Compile Include="IService\ISoftwareService.cs" />
+    <Compile Include="Service\BaseService.cs" />
+    <Compile Include="Service\CRService.cs" />
+    <Compile Include="Service\CertService.cs" />
+    <Compile Include="Service\DocumentGroupService.cs" />
+    <Compile Include="Service\EmployeeAssessmentService.cs" />
+    <Compile Include="Service\EmployeeService.cs" />
+    <Compile Include="Service\DocumentService.cs" />
+    <Compile Include="Service\InitiativeService.cs" />
+    <Compile Include="Service\InterviewService.cs" />
+    <Compile Include="Service\ILCService.cs" />
+    <Compile Include="Service\FormGroupService.cs" />
+    <Compile Include="Service\FirewallService.cs" />
+    <Compile Include="Service\MenuMenuItemService.cs" />
+    <Compile Include="Service\MenuItemService.cs" />
+    <Compile Include="Service\MenuModuleService.cs" />
+    <Compile Include="Service\MISModuleService.cs" />
+    <Compile Include="Service\MISIDService.cs" />
+    <Compile Include="Service\MenuService.cs" />
+    <Compile Include="Service\OrgnizationService.cs" />
+    <Compile Include="Service\ProjectService.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service\RFSTimelineService.cs" />
+    <Compile Include="Service\RFSService.cs" />
+    <Compile Include="Service\SupportingContactService.cs" />
+    <Compile Include="Service\SupportingSystemService.cs" />
+    <Compile Include="Service\SysLogService.cs" />
+    <Compile Include="Service\ServerService.cs" />
+    <Compile Include="Service\SoftwareGroupService.cs" />
+    <Compile Include="Service\RoleService.cs" />
+    <Compile Include="Service\TicketService.cs" />
+    <Compile Include="Service\TeamService.cs" />
+    <Compile Include="Service\UserService.cs" />
+    <Compile Include="Service\VacationService.cs" />
+    <Compile Include="Service\WeekService.cs" />
+    <Compile Include="Service\SoftwareService.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MISMVC.DAO\MISMVC.DAO.csproj">
+      <Project>{764b7396-e6ef-4860-825a-8c7faa7a036e}</Project>
+      <Name>MISMVC.DAO</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
